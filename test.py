@@ -1,3 +1,5 @@
+#This is where all test are conducted before implementation
+
 from tkinter import *
 from timetable import week
 
@@ -17,8 +19,8 @@ def new_values():
 
 root=Tk()
 
-sizex = 1000
-sizey = 600
+sizex = 1200
+sizey = 400
 posx  = 0
 posy  = 0
 root.wm_geometry("%dx%d+%d+%d" % (sizex, sizey, posx, posy))
@@ -31,14 +33,14 @@ for idx,item in enumerate(week_timetable):
     for count,r in enumerate(item):
         values = Entry(root)
         values.insert(END, r)
-        values.grid(row=idx, column=count)
+        values.grid(row=idx, column=count,)
         #print(r)
 
 
 
 
 b = Button(root, text="New Timetable",command =new_values) 
-b.grid(row=5,column=0)
+b.grid(row=7,column=0)
 
 
 
